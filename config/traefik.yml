@@ -1,0 +1,17 @@
+http:
+  middlewares:
+    secureHeaders:
+      headers:
+        frameDeny: true
+        browserxssfilter: true
+        contentTypeNosniff: true
+        stsIncludeSubdomains: true
+        stsPreload: true
+        stsSeconds: 15768000
+    compressFiles:
+      compress: {}
+
+tls:
+  options:
+    default:
+      minVersion: VersionTLS13
