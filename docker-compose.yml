@@ -29,6 +29,7 @@ services:
       - "--entrypoints.websecure.http.middlewares=compressFiles@file"
       - "--entrypoints.websecure.http.tls.options=default"
       - "--entrypoints.websecure.http.tls.certresolver=default"
+      - "--entryPoints.wireguard.address=:51820/udp"
       - "--certificatesresolvers.default.acme.dnschallenge=true"
       - "--certificatesresolvers.default.acme.dnschallenge.provider=cloudflare"
       - "--certificatesresolvers.default.acme.email=$ACME_EMAIL"
